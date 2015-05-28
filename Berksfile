@@ -1,5 +1,6 @@
 source "https://api.berkshelf.com"
 
+cookbook "zsh"
 cookbook "vim"
 cookbook "ruby_build"
 cookbook "rbenv", github: "fnichol/chef-rbenv"

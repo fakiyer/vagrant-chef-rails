@@ -7,6 +7,7 @@ DEPENDENCIES
     revision: 0a3018634bafe58ad21c6ee271af015220e444b9
   ruby_build
   vim
+  zsh
 
 GRAPH
   apt (2.7.0)
@@ -47,3 +48,4 @@ GRAPH
     yum (~> 3.0)
   yum-mysql-community (0.1.17)
     yum (>= 3.0)
+  zsh (1.0.1)

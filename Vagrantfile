@@ -79,6 +79,7 @@ Vagrant.configure(2) do |config|
   config.vm.provision :chef_client do |chef|
     chef.custom_config_path = "chef_custom_config"
     chef.run_list = [
+      "zsh",
       "vim",
       "ruby_build",
       "rbenv::user",
