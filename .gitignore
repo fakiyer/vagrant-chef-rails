@@ -1,2 +1,3 @@
-.vagrant/*
+.vagrant
 .zero-knife.rb
+cookbooks
