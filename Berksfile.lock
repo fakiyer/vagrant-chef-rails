@@ -1,5 +1,7 @@
 DEPENDENCIES
   git
+  myenv
+    path: site-cookbooks/myenv
   mysql (~> 5.3.6)
   nginx
   rbenv
@@ -14,7 +16,7 @@ GRAPH
   bluepill (2.3.1)
     rsyslog (>= 0.0.0)
   build-essential (2.2.3)
-  chef_handler (1.1.8)
+  chef_handler (1.1.9)
   dmg (2.2.2)
   git (4.2.2)
     build-essential (>= 0.0.0)
@@ -22,6 +24,7 @@ GRAPH
     windows (>= 0.0.0)
     yum-epel (>= 0.0.0)
   java (1.31.0)
+  myenv (0.1.0)
   mysql (5.3.6)
     yum-mysql-community (>= 0.0.0)
   nginx (2.7.6)

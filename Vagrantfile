@@ -81,6 +81,7 @@ Vagrant.configure(2) do |config|
     chef.run_list = [
       "zsh",
       "vim",
+      "myenv",
       "ruby_build",
       "rbenv::user",
       "git",
