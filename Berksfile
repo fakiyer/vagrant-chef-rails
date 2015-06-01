@@ -13,3 +13,4 @@ cookbook "nginx"
 
 # original
 cookbook "myenv", path: "./site-cookbooks/myenv"
+cookbook "localization", path: "./site-cookbooks/localization"

@@ -47,7 +47,7 @@ Vagrant.configure(2) do |config|
   config.vm.provider "virtualbox" do |vb|
     # display the virtualbox gui when booting the machine
     #vb.gui = true
-  
+
     # customize the amount of memory on the vm:
     vb.memory = "1024"
   end
@@ -89,7 +89,8 @@ Vagrant.configure(2) do |config|
       "mysql::server",
       "mysql::client",
       "nginx::source",
-      "myenv"
+      "myenv",
+      "localization"
     ]
     chef.json = {
       "tz" => "Asia/Tokyo",
