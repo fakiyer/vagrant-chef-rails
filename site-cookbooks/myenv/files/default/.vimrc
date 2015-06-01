@@ -25,7 +25,6 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Avoid a name conflict with L9
 "Plugin 'user/L9', {'name': 'newL9'}
 
-"own
 " My Bundles here:
 " Bundle 'railscasts'
 Plugin 'surround.vim'
@@ -37,6 +36,7 @@ Plugin 'surround.vim'
 " Bundle 'AutoClose'
 " Bundle 'hrp/EnhancedCommentify'
 Plugin 'tomtom/tcomment_vim'
+Plugin 'tpope/vim-endwise'
 
 " Ruby/Rails
 Plugin 'vim-ruby/vim-ruby'
@@ -48,13 +48,10 @@ Plugin 'tpope/vim-projectionist'
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'scrooloose/nerdcommenter'
 " Bundle 'snipMate'
+Plugin 'ruby-matchit'
 
 " Git
 Plugin 'git-commit'
-
-" faki
-Plugin 'tpope/vim-endwise'
-Plugin 'ruby-matchit'
 " Bundle 'altercation/vim-colors-solarized'
 
 " All of your Plugins must be added before the following line

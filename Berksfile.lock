@@ -8,6 +8,10 @@ DEPENDENCIES
     git: git://github.com/fnichol/chef-rbenv.git
     revision: 0a3018634bafe58ad21c6ee271af015220e444b9
   ruby_build
+  timezone-ii
+    git: git://github.com/L2G/timezone-ii.git
+    revision: 28c9e49c58c534e798cf01a77a9373c4c54f4587
+  tmux
   vim
   zsh
 
@@ -43,6 +47,8 @@ GRAPH
   ruby_build (0.8.0)
   runit (1.6.0)
     packagecloud (>= 0.0.0)
+  timezone-ii (0.2.9992)
+  tmux (1.4.0)
   vim (1.1.2)
   windows (1.37.0)
     chef_handler (>= 0.0.0)

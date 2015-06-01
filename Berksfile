@@ -1,8 +1,10 @@
 source "https://api.berkshelf.com"
 
 # community
+cookbook "timezone-ii", github: "L2G/timezone-ii"
 cookbook "vim"
 cookbook "zsh"
+cookbook "tmux"
 cookbook "ruby_build"
 cookbook "rbenv", github: "fnichol/chef-rbenv"
 cookbook "git"

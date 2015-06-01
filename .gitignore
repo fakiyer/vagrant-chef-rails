@@ -1,3 +1,4 @@
 .vagrant
 .zero-knife.rb
 cookbooks
+*.log

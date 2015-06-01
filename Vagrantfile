@@ -44,13 +44,13 @@ Vagrant.configure(2) do |config|
   # backing providers for Vagrant. These expose provider-specific options.
   # Example for VirtualBox:
   #
-  # config.vm.provider "virtualbox" do |vb|
-  #   # Display the VirtualBox GUI when booting the machine
-  #   vb.gui = true
-  #
-  #   # Customize the amount of memory on the VM:
-  #   vb.memory = "1024"
-  # end
+  config.vm.provider "virtualbox" do |vb|
+    # display the virtualbox gui when booting the machine
+    #vb.gui = true
+  
+    # customize the amount of memory on the vm:
+    vb.memory = "1024"
+  end
   #
   # View the documentation for the provider you are using for more
   # information on available options.
@@ -79,17 +79,23 @@ Vagrant.configure(2) do |config|
   config.vm.provision :chef_client do |chef|
     chef.custom_config_path = "chef_custom_config"
     chef.run_list = [
+      "timezone-ii",
       "zsh",
       "vim",
-      "myenv",
+      "tmux",
       "ruby_build",
       "rbenv::user",
       "git",
       "mysql::server",
       "mysql::client",
-      "nginx::source"
+      "nginx::source",
+      "myenv"
     ]
     chef.json = {
+      "tz" => "Asia/Tokyo",
+      "tmux" => {
+        "install_method" => "package"
+      },
       "rbenv" => {
         "user_installs" => [
           {
