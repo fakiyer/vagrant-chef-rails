@@ -4,6 +4,7 @@
 #
 # Copyright (c) 2015 The Authors, All Rights Reserved.
 
+# dotfiles
 dotfiles_dir = File.join("/home/vagrant/", "dotfiles/")
 
 directory dotfiles_dir do
@@ -28,7 +29,7 @@ execute "install dotfiles" do
   command "sh /home/vagrant/dotfiles/install.sh"
 end
 
-
+# vundle
 vundle_dir = File.join("/home/vagrant/", ".vim/bundle/")
 
 directory vundle_dir do
@@ -52,4 +53,27 @@ execute "install plugins via vundle" do
   environment "HOME" => "/home/vagrant/"
   timeout 500
   command "vim +PluginInstall +qall"
+end
+
+# oh-my-zsh
+ohmyzsh_dir = File.join("/home/vagrant/", ".oh-my-zsh/")
+
+git ohmyzsh_dir do
+  user "vagrant"
+  group "vagrant"
+  repository "https://github.com/robbyrussell/oh-my-zsh.git"
+  reference "master"
+  action :sync
+end
+
+git File.join(ohmyzsh_dir + "custom/plugins", "zsh-syntax-highlighting") do
+  user "vagrant"
+  group "vagrant"
+  repository "https://github.com/zsh-users/zsh-syntax-highlighting.git"
+  reference "master"
+  action :sync
+end
+
+execute "change default shell to zsh" do
+  command "chsh -s /bin/zsh vagrant"
 end
