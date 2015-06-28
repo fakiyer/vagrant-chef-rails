@@ -83,7 +83,7 @@ Vagrant.configure(2) do |config|
       "zsh",
       "vim",
       "tmux",
-      "git",
+      "git::source",
       "mysql::server",
       "mysql::client",
       "nginx::source",
@@ -101,6 +101,11 @@ Vagrant.configure(2) do |config|
         "port" => "3306",
         "server_root_password" => "vagrant",
         "remove_anonymous_users" => true
+      },
+      "git" => {
+        "version" => "2.4.5",
+        "url" => "https://www.kernel.org/pub/software/scm/git/git-2.4.5.tar.gz",
+        "checksum" => "1b180ffe004004f29cadf5e978c8ff54d41d6fa7b98c05433ba685aa8e4be4a2"
       },
       "nginx" => {
         "version" => "1.9.0",
