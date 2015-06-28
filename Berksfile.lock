@@ -7,9 +7,7 @@ DEPENDENCIES
   mysql (~> 5.3.6)
   nginx
   rbenv
-    git: git://github.com/fnichol/chef-rbenv.git
-    revision: 0a3018634bafe58ad21c6ee271af015220e444b9
-  ruby_build
+    path: site-cookbooks/rbenv
   timezone-ii
     git: git://github.com/L2G/timezone-ii.git
     revision: 28c9e49c58c534e798cf01a77a9373c4c54f4587
@@ -22,14 +20,13 @@ GRAPH
   bluepill (2.3.1)
     rsyslog (>= 0.0.0)
   build-essential (2.2.3)
-  chef_handler (1.1.9)
+  chef_handler (1.2.0)
   dmg (2.2.2)
   git (4.2.2)
     build-essential (>= 0.0.0)
     dmg (>= 0.0.0)
     windows (>= 0.0.0)
     yum-epel (>= 0.0.0)
-  java (1.31.0)
   localization (0.1.0)
   myenv (0.1.0)
   mysql (5.3.6)
@@ -42,22 +39,19 @@ GRAPH
     runit (~> 1.2)
     yum-epel (~> 0.3)
   ohai (2.0.1)
-  packagecloud (0.0.18)
-  rbenv (0.7.3)
-    java (> 1.4.0)
-    ruby_build (>= 0.0.0)
+  packagecloud (0.0.19)
+  rbenv (0.1.0)
   rsyslog (2.0.0)
-  ruby_build (0.8.0)
-  runit (1.6.0)
+  runit (1.7.2)
     packagecloud (>= 0.0.0)
   timezone-ii (0.2.9992)
   tmux (1.4.0)
   vim (1.1.2)
   windows (1.37.0)
     chef_handler (>= 0.0.0)
-  yum (3.6.0)
-  yum-epel (0.6.0)
-    yum (~> 3.0)
+  yum (3.6.1)
+  yum-epel (0.6.2)
+    yum (~> 3.2)
   yum-mysql-community (0.1.17)
     yum (>= 3.0)
   zsh (1.0.1)

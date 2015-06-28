@@ -83,12 +83,11 @@ Vagrant.configure(2) do |config|
       "zsh",
       "vim",
       "tmux",
-      "ruby_build",
-      "rbenv::user",
       "git",
       "mysql::server",
       "mysql::client",
       "nginx::source",
+      "rbenv",
       "myenv",
       "localization"
     ]
@@ -96,15 +95,6 @@ Vagrant.configure(2) do |config|
       "tz" => "Asia/Tokyo",
       "tmux" => {
         "install_method" => "package"
-      },
-      "rbenv" => {
-        "user_installs" => [
-          {
-            "user" => "vagrant",
-            "rubies" => ["2.2.2"],
-            "global" => "2.2.2",
-          }
-        ]
       },
       "mysql" => {
         "version" => "5.6",
