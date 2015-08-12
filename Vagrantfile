@@ -51,6 +51,8 @@ Vagrant.configure(2) do |config|
 
     # customize the amount of memory on the vm:
     vb.memory = "1024"
+
+    vb.customize ["setextradata", :id, "VBoxInternal/Devices/VMMDev/0/Config/GetHostTimeDisabled", 0]
   end
   #
   # View the documentation for the provider you are using for more
