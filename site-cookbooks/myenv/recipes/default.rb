@@ -77,3 +77,22 @@ end
 execute "change default shell to zsh" do
   command "chsh -s /bin/zsh vagrant"
 end
+
+# fzf
+fzf_dir = File.join("/home/vagrant/", ".fzf/")
+
+git fzf_dir do
+  user "vagrant"
+  group "vagrant"
+  repository "https://github.com/junegunn/fzf.git"
+  reference "master"
+  depth 1
+  action :sync
+end
+
+execute "install fzf" do
+  user "vagrant"
+  group "vagrant"
+  environment "HOME" => "/home/vagrant/"
+  command "sh /home/vagrant/.fzf/install"
+end
